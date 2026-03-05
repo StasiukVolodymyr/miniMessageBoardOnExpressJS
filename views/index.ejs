@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>homepage</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1 class="main">Mini Message Board</h1>
+    <div class="container">
+    <% for(let i = 0; i < messages.length; i++) { %>
+      <div class="card">
+          <span>Message: <%= messages[i].text %></span><br><span>User: <%= messages[i].user %></span><br><span class="date"><%= messages[i].added %></span>
+      </div>
+    <% } %>
+    <a class="link" href="/new">Add new message</a>
+    </div>
+  </body>
+</html>
